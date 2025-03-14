@@ -1,3 +1,5 @@
+using System.Security.Cryptography;
+
 public class Journal
 {
     private List<Entry> _entries {get; set;} = new List<Entry>();
@@ -19,10 +21,16 @@ public class Journal
 
     public void DisplayAll()
     {
+        if(_entries.Count == 0)
+        {
+            Console.WriteLine("Your Journal has no entries." + Environment.NewLine);
+            return;
+        }
+
         foreach(Entry entry in _entries)
         {
             entry.Display();
-            Console.WriteLine(Environment.NewLine);
+            Console.WriteLine("");
         }
     }
 
@@ -47,11 +55,14 @@ public class Journal
 
             foreach(string s in lines)
             {
-                string[] parts = s.Split('|');
-                Entry entry = new Entry(parts[0], parts[1], parts[2]);
+                string[] parts = s.Split(';');
+                Entry entry = new Entry(parts[0], parts[1], parts[2], parts[3]);
                 AddEntry(entry);
             }
         }
-       
+        else
+        {
+            Console.WriteLine($"The File {file} is not existing." + Environment.NewLine);
+        }   
     }
 }

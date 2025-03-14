@@ -2,12 +2,19 @@ using System;
 
 class Program
 {
+    /* I added another class for the choices.
+    * The Data will be stored with semikolon separated, so you can easily save it as a txt or csv.
+    *-> That brings also the bonus that you could open and edit it via Excel.
+    * I also added the timepoint of the entry as an additional information.
+    * When the file doesn't exists, it tells you that.
+    * If you don't have entries in your yournal, you will see that as a feedback.
+    */
     static void Main(string[] args)
     {
        
        List<string> options = new List<string>{"Write", "Display", "Load", "Save", "Quit"};
        List<string> journalPrompts = new List<string>
-        {
+       {
             "Who was the most interesting person I interacted with today?",
             "What are three things you’re grateful for today?",
             "Describe a moment from today that made you smile.",
@@ -55,3 +62,4 @@ class Program
         }
     }
 }
+
