@@ -1,5 +1,14 @@
 using System;
 
+
+/*  The following features did I add
+    - I created an own class for the template Scriptures.
+        -> in that way, the Reference and the text can be stored as a string.
+        -> the reference can be got as a Reference-class
+    - The scriptures are stored in a List
+    - With the programstart it will choose a random entry from the scripture list.
+    - the HideRandomWords() Method needs a quantity of words that with each time will be hidden.
+*/
 class Program
 {
     static void Main(string[] args)
