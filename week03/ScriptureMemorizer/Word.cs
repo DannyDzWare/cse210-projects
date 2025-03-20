@@ -1,7 +1,7 @@
 public class Word
 {
     private string _text {get; set;} = string.Empty;
-    private bool _isHidden {get; set;} = false;
+    private bool _isHidden { get; set;} = false;
 
     public Word(string text)
     {

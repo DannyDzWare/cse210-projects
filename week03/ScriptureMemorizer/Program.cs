@@ -22,6 +22,8 @@ class Program
         int index = new Random().Next(0, listScriptures.Count);
         Scripture scripture = new Scripture(listScriptures[index].GetReference(), listScriptures[index].GetText());
 
+
+   
         string userInput = "";
 
         while(userInput.ToLower() != "quit")

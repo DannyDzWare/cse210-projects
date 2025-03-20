@@ -3,6 +3,7 @@ public class Scripture
     private Reference _reference {get; set;} = new Reference("", 0, 0);
     private List<Word> _words {get; set;} = new List<Word>();
 
+
     public Scripture(Reference reference, string text)
     {
         _reference = reference;
