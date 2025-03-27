@@ -1,10 +1,14 @@
 public class Product
 {
+    #region internal Variables
     private string _name { get; set; }
     private int _productId { get; set; }
     private double _price { get; set; }
     private int _quantity { get; set; }
 
+    #endregion
+    
+    #region external Variables
     public string Name{
         get{ return _name;}
     }
@@ -12,7 +16,9 @@ public class Product
     public int ProductId{
         get{ return _productId;}
     }
-
+    #endregion
+    
+    #region Constructor
     public Product(string name, int productId, double price, int quantity)
     {
         _name = name;
@@ -20,7 +26,7 @@ public class Product
         _price = price;
         _quantity = quantity;
     }
-
+    #endregion
     public double GetTotalCost()
     {
         return _price * _quantity;
