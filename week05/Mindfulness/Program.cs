@@ -1,7 +1,8 @@
 using System;
 
-/* As an exceeding task I inserted a counter which tells you in the end how many of each activities you were doing.
-
+/* 
+    As an exceeding task I inserted a counter which tells you in the end how many of each activities you were doing.
+    I also added a temporary questions list in the reflecting Activity to ensure, that all questions are only asked once.
 */
 class Program
 {

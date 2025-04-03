@@ -32,7 +32,8 @@ public class ReflectingActivity : Activity
     public void Run()
     {
         int seconds = 0;
-
+        List<string> tempQuestions = new List<string>();
+        tempQuestions.AddRange(_questions);
         DisplayPrompt();
         Console.WriteLine("When you have something in mind, press enter to continue.");
         Console.ReadLine();
@@ -44,7 +45,7 @@ public class ReflectingActivity : Activity
 
         while(seconds < _duration)
         {
-            DisplayQuestions();
+            DisplayQuestions(tempQuestions);
             seconds += 15;
         }
     }
@@ -58,6 +59,19 @@ public class ReflectingActivity : Activity
         string question = _questions[new Random().Next(0, _questions.Count)];
         return $"> {question}";    
     }
+    public string GetRandomQuestion(List<string> questions)
+    {
+        if(questions.Count == 0)
+        {
+            return $"> No more questions available";    
+        }
+        else
+        {
+            string question = questions[new Random().Next(0, questions.Count)];
+            questions.Remove(question);
+            return $"> {question}";    
+        }
+    }
 
     public void DisplayPrompt()
     {
@@ -68,6 +82,12 @@ public class ReflectingActivity : Activity
     public void DisplayQuestions()
     {
         Console.Write(GetRandomQuestion());
+        ShowSpinner(15);
+        Console.WriteLine("");
+    }
+    public void DisplayQuestions(List<string> questions)
+    {
+        Console.Write(GetRandomQuestion(questions));
         ShowSpinner(15);
         Console.WriteLine("");
     }
