@@ -8,15 +8,11 @@ public class BreathingActivity : Activity
 
     public void Run()
     {
-        Console.WriteLine("How long in seconds, would you like for your session?");
-        _duration = Convert.ToInt32(Console.ReadLine());
         int seconds = 0;
-        Console.Clear();
-        System.Console.WriteLine("Get ready...");
-        ShowSpinner(6);
-        Console.WriteLine(Environment.NewLine);
+        
         Console.Write($"Breathe in...");
         ShowCountdown(3);
+        Console.WriteLine("");
         Console.Write($"Now breathe out...");
         ShowCountdown(3);
 
@@ -25,9 +21,11 @@ public class BreathingActivity : Activity
             Console.WriteLine(Environment.NewLine);
             Console.Write($"Breathe in...");
             ShowCountdown(4);
+            Console.WriteLine("");
             Console.Write($"Now breathe out...");
             ShowCountdown(6);
             seconds += 10;
         }
+        Console.WriteLine("");
     }
 }

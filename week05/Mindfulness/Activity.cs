@@ -14,13 +14,20 @@ public class Activity
         Console.Clear();
         Console.WriteLine($"Welcome to the {_name}\n");
         Console.WriteLine($"{_description}\n");
+
+         Console.WriteLine("How long in seconds, would you like for your session?");
+        _duration = Convert.ToInt32(Console.ReadLine());
+        Console.Clear();
+        System.Console.WriteLine("Get ready...");
+        ShowSpinner(6);
+        Console.WriteLine("");
     }
     public void DisplayEndingMessage()
     {
-        Console.WriteLine(Environment.NewLine);
+        Console.WriteLine("");
         Console.WriteLine("Well done!!");
         ShowSpinner(5);
-        Console.WriteLine(Environment.NewLine);
+        Console.WriteLine("");
         Console.WriteLine($"You have completed another {_duration} seconds of the {_name}.");
         ShowSpinner(5);
     }
