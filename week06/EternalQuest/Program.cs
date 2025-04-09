@@ -20,9 +20,9 @@ class Program
             {
                 case "1": goalManager.CreateGoal(); break;
                 case "2": goalManager.ListGoalDetails(); break;
-                case "3": break;
-                case "4": break;
-                case "5": break;
+                case "3": goalManager.SaveGoals(); break;
+                case "4": goalManager.LoadGoals(); break;
+                case "5": goalManager.RecordEvent(); break;
                 default: break;
             }
         }
