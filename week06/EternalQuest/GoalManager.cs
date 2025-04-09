@@ -94,7 +94,7 @@ public class GoalManager
         _score += points;
 
         Console.WriteLine($"Congratulations! You have earned {points} points!");
-        Console.WriteLine($"You now have {_score} points!");
+        Console.WriteLine($"You now have {_score} points!\n");
     }
     
     public void SaveGoals()
