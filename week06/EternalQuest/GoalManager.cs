@@ -11,11 +11,6 @@ public class GoalManager
         
     }
 
-    public void Start()
-    {
-        
-    }
-
     public void DisplayPlayerInfo()
     {
         Console.WriteLine($"You have {_score} points.\n");
