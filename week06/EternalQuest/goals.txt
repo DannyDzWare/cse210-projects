@@ -1,0 +1,6 @@
+530
+SimpleGoal|Give a Talk|In Sacrament Meeting when asked|50|True
+EternalGoal|Scripture Study|Every day at least 10 minutes.|100
+ChecklistGoal|Visit the temple.|Any Ordinances|100|500|3|3
+NegativeGoal|Eating Chocolate|More than one piece a day|300
+NegativeGoal|jokes|telling too much jokes|-20
