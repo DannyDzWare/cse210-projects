@@ -1,4 +1,4 @@
-public class Activity
+public abstract class Activity
 {
     protected Int32 _minutes = 0;
     protected string _activityName = "Activity";
@@ -10,18 +10,8 @@ public class Activity
         Console.WriteLine(result);
     }
 
-    public virtual double GetDistance()
-    {
-        return 0.0;
-    }
+    public abstract double GetDistance();
 
-    public virtual double GetSpeed()
-    {
-        return 0.0;
-    }
-
-    public virtual double GetPace()
-    {
-        return 0.0;
-    }
+    public abstract double GetSpeed();
+    public abstract double GetPace();
 }
